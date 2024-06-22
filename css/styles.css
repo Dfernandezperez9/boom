@@ -1,12 +1,93 @@
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
 body {
+  box-shadow: 76px 92px 14px -26px rgba(0,0,0,0.83);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border-radius: 50%;
+  height: 800px;
+  width: 800px;
   font-family: 'Arial', sans-serif;
-  background-color: #f0f0f0;
-  margin: 0;
-  padding: 0;
+  background-color: black;
+  margin: 25px;
+  
+}
+
+
+
+.mecha1 {
+  position: absolute;
+  left: 450px;
+  bottom: 300px;
+  rotate: -18deg;
+  height: 150px;
+  width: 150px;
+  background-color: black;
+  border: 2px solid black;
+  z-index: 910;
+}
+
+.mecha2 {
+  animation: mecha2Animation 3.7s infinite;
+  position: absolute;
+  rotate: -5deg;
+  left: 180px;
+  bottom: 280px;
+  height: 100px;
+  width: 300px;
+  background-color: #FF4500;
+  border-radius: 100% 50% 100% 50%;
+  z-index: 900;
+}
+
+.llama {
+  position: absolute;
+  rotate: -8deg;
+  left: 320px;
+  bottom: 327px;
+  height: 30px;
+  width: 150px;
+  background-color: yellow;
+  border-radius: 100% 50% 100% 50%;
+  z-index: 900;
+}
+
+.reflejo {
+  position: absolute;
+  rotate: 98deg;
+  left: 510px;
+  bottom: 550px;
+  height: 30px;
+  width: 200px;
+  background-color: #ccc;
+  border-radius: 100% 50% 100% 50%;
+  z-index: 900;
+}
+
+.reflejo2 {
+  position: absolute;
+  rotate: 115deg;
+  left: 610px;
+  bottom: 700px;
+  height: 20px;
+  width: 50px;
+  background-color: #ccc;
+  border-radius: 100% 50% 100% 50%;
+  z-index: 999;
 }
 
 h1 {
-  color: #333;
+  animation: h1Animation 3.7s infinite;
+  font-size: 100px;
+  font-family: fantasy;
 }
 #result .green {
   color: #2ecc71;
@@ -15,3 +96,126 @@ h1 {
 #result .red {
   color: #e74c3c;
 }
+
+#countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+}
+
+#result {
+  position: relative;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 200px;
+  border: 2px solid black;
+}
+
+#restart {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.enunciado {
+  animation: enunciadoAnimation 15s forwards;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: white;
+}
+
+.parrafo1 {
+  font-family: fantasy;
+  font-size: 60px;
+  font-weight: bold;
+  color: white;
+}
+
+.animacion {
+  animation: cuentaAtrasAnimation 8s forwards;
+}
+
+.parrafo2 {
+  font-size: 20px;
+  color: white;
+  z-index: 999;
+}
+
+.animacion2 {
+  animation: resultadosAnimation 20s forwards;
+}
+
+#restart {
+  position: relative;
+  bottom: 20px;
+  box-shadow: 0px 5px 0px 0px rgba(138,4,4,1);
+  font-weight: bold;
+  cursor: pointer;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: none;
+  background-color: red;
+  margin-top: 10px;
+}
+
+#restart:hover {
+    animation: botonAnimation 2s infinite; 
+}
+
+
+
+
+
+@keyframes h1Animation {
+  0% {transform: scale(1); color: #FF4500;}
+  25% {transform: scale(1.5); color:  #F21010;}
+  50% {transform: scale(1); color: #FF4500;}
+  75% {transform: scale(1.5); color: #F21010;}
+  100% {transform: scale(1); color: #FF4500;}
+}
+
+@keyframes mecha2Animation {
+  0% {transform: scale(1); color: #FF4500;}
+  25% {transform: scale(1.2); color:  #F21010;}
+  50% {transform: scale(1); color: #FF4500;}
+  75% {transform: scale(1.2); color: #F21010;}
+  100% {transform: scale(1); color: #FF4500;}
+}
+
+@keyframes enunciadoAnimation {
+  0% {opacity: 0%;}
+  100% {opacity: 100%;}
+}
+
+@keyframes cuentaAtrasAnimation {
+  0% {translate: 0px -90px;}
+  100% {translate: 0px 0px;}
+}
+
+@keyframes resultadosAnimation {
+  0% {opacity: 0%;}
+  10% {opacity: 0%;}
+  20% {opacity: 0%;}
+  30% {opacity: 0%;}
+  100% {opacity: 100%;}
+}
+
+@keyframes botonAnimation {
+  25% {translate: 0px 4px; box-shadow: none}
+  50% {translate: 0px 0px; box-shadow: 0px 5px 0px 0px rgba(138,4,4,1)}
+  75% {translate: 0px 4px; box-shadow: none}
+  100% {translate: 0px 0px; box-shadow: 0px 5px 0px 0px rgba(138,4,4,1)}
+}
+
+  
+  
+ 
+
+
+
+
